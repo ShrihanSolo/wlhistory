@@ -23,7 +23,6 @@
   /* Small screens. Layout is inline, so these rules override by attribute and need !important. */
   @media (max-width: 860px) {
     [style*="--essay-cols"] { --essay-cols: 1 !important; --body-align: left !important; }
-    [style*="minmax(0, 1.25fr)"] { grid-template-columns: minmax(0, 1fr) !important; }
     [style*="minmax(380px"] { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)) !important; }
   }
   @media (max-width: 640px) {
@@ -45,6 +44,7 @@
     svg[viewBox="0 0 660 502"] { display: none !important; }
     svg[data-fig12-mobile] { display: block !important; }
     [style*="gap: 0 56px"] { gap: 0 !important; }
+    [style*="float: right"] { width: 50% !important; margin: 4px 0 12px 20px !important; }
   }
 </style>
 </helmet>
@@ -256,20 +256,20 @@
       </div>
       <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.1; letter-spacing: -0.01em; margin: 0 0 24px; margin-left: -0.042em;">Zwicky&rsquo;s proposal</h2>
       <p style="font-size: 20px; line-height: 33px; margin: 0 0 40px;">Einstein published the lensing formula in <em>Science</em> and privately called it worthless. Within a year Fritz Zwicky had explained, correctly and in a single page, why it would become one of astronomy&rsquo;s best instruments.</p>
-      <div style="margin-top: 40px; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 48px; align-items: start;">
-        <div style="text-align: var(--body-align); hyphens: auto; hyphenate-limit-chars: 6 3 3;">
-          <p style="margin: 0 0 20px;">Einstein&rsquo;s 1936 note was written under duress. A Czech amateur named Rudi Mandl had been pestering him about stellar lensing for months, and Einstein eventually worked out the ring and the magnification and sent them to <em>Science</em>. He told the editor privately that the paper had little value and that he had written it only to keep Mandl quiet. His reasoning was sound on its own terms: for one star lensing another, the ring would be milliarcseconds across, far too small to resolve, and the alignments would be absurdly rare.</p>
-          <p style="margin: 0 0 20px;">Zwicky, writing in <em>Physical Review</em> the following year, changed the lens. &ldquo;Extragalactic nebulae&rdquo; &mdash; galaxies, and clusters of them &mdash; are enormously more massive than stars and enormously larger on the sky, so both the angular scale of the effect and the probability of a chance alignment grow by orders of magnitude. What was hopeless for stars was plausible for galaxies.</p>
-          <p style="margin: 0 0 20px;">He then listed three uses, which read today like a research programme. Lensing would furnish a new test of general relativity. Magnification would let astronomers see objects too distant to observe otherwise. And &mdash; most consequentially &mdash; lensing would give <em>the masses of nebulae</em> directly.</p>
-          <p style="margin: 0 0 20px;">That third point is the conceptual heart of everything that follows. Deflection depends only on mass, and is indifferent to whether the mass shines. Zwicky had argued in 1933 from the velocity dispersion of the Coma cluster that it contained far more mass than its galaxies could account for, so he was already primed to want a mass measurement that owed nothing to light. He was proposing, in effect, to weigh dark matter.</p>
-          <p style="margin: 0 0 20px;">What he imagined, though, was strong lensing: multiple images, rings, dramatic and rare. The idea that you could recover mass from subtle statistical distortions of thousands of ordinary background galaxies was not there yet, and would not arrive for thirty years. Nor was there anything to look at. No gravitational lens of any kind was observed until 1979.</p>
-        </div>
-        <div>
+      <div style="margin-top: 40px; display: flow-root; text-align: var(--body-align); hyphens: auto; hyphenate-limit-chars: 6 3 3;">
+        <div style="float: right; width: 42%; max-width: 380px; margin: 6px 0 20px 44px;">
           <figure class="plate" style="margin: 0;">
             <image-slot id="wl-fig-2a" shape="rect" fit="contain" style="width: 100%; aspect-ratio: 665 / 911;" placeholder="Zwicky (1937), first page" src="images/zwickypaper.png" credit="Zwicky (1937), Phys. Rev. 51, 290"></image-slot>
           </figure>
           <p style="font-size: 13.5px; line-height: 23px; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 14px 0 0;"><span style="color: var(--color-accent-700); letter-spacing: 0.06em; text-transform: uppercase; font-size: 12px;">Fig. 2</span> &nbsp;Zwicky (1937), <em>Phys. Rev.</em> <strong>51</strong>, 290, &ldquo;Nebulae as Gravitational Lenses&rdquo; &mdash; a single page, two columns long, and right about nearly everything.</p>
         </div>
+
+          <p style="margin: 0 0 20px;">Einstein&rsquo;s 1936 note was written under duress. A Czech amateur named Rudi Mandl had been pestering him about stellar lensing for months, and Einstein eventually worked out the ring and the magnification and sent them to <em>Science</em>. He told the editor privately that the paper had little value and that he had written it only to keep Mandl quiet. His reasoning was sound on its own terms: for one star lensing another, the ring would be milliarcseconds across, far too small to resolve, and the alignments would be absurdly rare.</p>
+          <p style="margin: 0 0 20px;">Zwicky, writing in <em>Physical Review</em> the following year, changed the lens. &ldquo;Extragalactic nebulae&rdquo; &mdash; galaxies, and clusters of them &mdash; are enormously more massive than stars and enormously larger on the sky, so both the angular scale of the effect and the probability of a chance alignment grow by orders of magnitude. What was hopeless for stars was plausible for galaxies.</p>
+          <p style="margin: 0 0 20px;">He then listed three uses, which read today like a research programme. Lensing would furnish a new test of general relativity. Magnification would let astronomers see objects too distant to observe otherwise. And &mdash; most consequentially &mdash; lensing would give <em>the masses of nebulae</em> directly.</p>
+          <p style="margin: 0 0 20px;">That third point is the conceptual heart of everything that follows. Deflection depends only on mass, and is indifferent to whether the mass shines. Zwicky had argued in 1933 from the velocity dispersion of the Coma cluster that it contained far more mass than its galaxies could account for, so he was already primed to want a mass measurement that owed nothing to light. He was proposing, in effect, to weigh dark matter.</p>
+          <p style="margin: 0 0 20px;">What he imagined, though, was strong lensing: multiple images, rings, dramatic and rare. The idea that you could recover mass from subtle statistical distortions of thousands of ordinary background galaxies was not there yet, and would not arrive for thirty years. Nor was there anything to look at. No gravitational lens of any kind was observed until 1979.</p>
+        
       </div>
       <div style="margin: 48px auto 0; max-width: 64ch; padding: 26px 24px 28px; text-align: center; border-top: 1px solid var(--color-accent); border-bottom: 1px solid var(--color-accent);">
         <p style="margin: 0; font-family: var(--font-heading); font-size: 23px; line-height: 35px; text-wrap: balance;">Deflection depends only on mass, and is indifferent to whether the mass shines.</p>
