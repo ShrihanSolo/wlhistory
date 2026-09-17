@@ -19,6 +19,33 @@
   summary::-webkit-details-marker { display: none; }
   summary { list-style: none; }
   ::selection { background: color-mix(in srgb, var(--color-accent) 22%, transparent); }
+
+  /* Small screens. Layout is inline, so these rules override by attribute and need !important. */
+  @media (max-width: 860px) {
+    [style*="--essay-cols"] { --essay-cols: 1 !important; --body-align: left !important; }
+    [style*="minmax(0, 1.25fr)"] { grid-template-columns: minmax(0, 1fr) !important; }
+    [style*="minmax(380px"] { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)) !important; }
+  }
+  @media (max-width: 640px) {
+    header > span[style*="text-transform: uppercase"] { display: none; }
+    [data-rail] > div { min-width: 0 !important; gap: 26px !important; padding: 12px 20px 12px !important; }
+    [data-rail] > div > div { top: 16px !important; }
+    [data-rail-link] { flex: 0 0 auto !important; }
+    [data-rail-link] > span:first-child { display: none; }
+    [data-rail-link] > span:last-child { height: auto !important; max-width: none !important; white-space: nowrap; }
+    [data-rail-link]:last-child { padding-right: 20px; }
+    section[id] { scroll-margin-top: 112px !important; }
+    [style*="clamp(56px, 9vw, 112px)"] { padding-top: 40px !important; }
+    h1[style*="clamp(44px"] { font-size: 36px !important; }
+    h2[style*="clamp(34px"] { font-size: 31px !important; }
+    [style*="padding: 26px 30px"], [style*="padding: 28px 30px 22px"] { padding-left: 16px !important; padding-right: 16px !important; }
+    [style*="font-size: 30px; line-height: 1.5"] { font-size: 20px !important; white-space: nowrap; overflow-x: auto; padding-bottom: 4px; }
+    [style*="font-size: 21px; line-height: 1.5"] { font-size: 17px !important; }
+    [style*="padding: 26px 24px 28px"] p { font-size: 20px !important; line-height: 31px !important; }
+    svg[viewBox="0 0 660 502"] { display: none !important; }
+    svg[data-fig12-mobile] { display: block !important; }
+    [style*="gap: 0 56px"] { gap: 0 !important; }
+  }
 </style>
 </helmet>
 
@@ -1432,6 +1459,107 @@
           <circle cx="419.6" cy="428.0" r="5" style="fill: var(--color-text);" stroke="none"/>
           </g>
           <text x="652" y="432.0" text-anchor="end" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11.5px; font-feature-settings: 'tnum' 1;">0.789</text>
+        </svg>
+<svg data-fig12-mobile="" viewBox="0 0 352 632" role="img" aria-label="Dot plot of S8 measurements from weak lensing surveys, each with its 68 percent interval, against the Planck 2018 value" style="display: none; width: 100%; height: auto;">
+          <rect x="250.0" y="30" width="52.0" height="556.0" style="fill: color-mix(in srgb, var(--color-text) 6%, transparent);" stroke="none"/>
+          <line x1="276.0" y1="30" x2="276.0" y2="586.0" style="stroke: var(--color-accent-700);" stroke-width="1" stroke-dasharray="3 3"/>
+          <text x="332.0" y="22" text-anchor="end" style="fill: var(--color-accent-700); font-family: var(--font-body); font-size: 11px; letter-spacing: 0.04em;">Planck 2018: 0.832 &plusmn; 0.013</text>
+          <line x1="12.0" y1="586.0" x2="332.0" y2="586.0" style="stroke: var(--color-divider);" stroke-width="1"/>
+          <line x1="12.0" y1="586.0" x2="12.0" y2="591.0" style="stroke: var(--color-divider);" stroke-width="1"/>
+          <text x="12.0" y="605.0" text-anchor="middle" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.70</text>
+          <line x1="92.0" y1="586.0" x2="92.0" y2="591.0" style="stroke: var(--color-divider);" stroke-width="1"/>
+          <text x="92.0" y="605.0" text-anchor="middle" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.74</text>
+          <line x1="172.0" y1="586.0" x2="172.0" y2="591.0" style="stroke: var(--color-divider);" stroke-width="1"/>
+          <text x="172.0" y="605.0" text-anchor="middle" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.78</text>
+          <line x1="252.0" y1="586.0" x2="252.0" y2="591.0" style="stroke: var(--color-divider);" stroke-width="1"/>
+          <text x="252.0" y="605.0" text-anchor="middle" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.82</text>
+          <line x1="332.0" y1="586.0" x2="332.0" y2="591.0" style="stroke: var(--color-divider);" stroke-width="1"/>
+          <text x="332.0" y="605.0" text-anchor="middle" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.86</text>
+          <text x="172.0" y="621.0" text-anchor="middle" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;">S&#8328;</text>
+          <text x="12" y="50.0" style="fill: var(--color-text); font-family: var(--font-heading); font-size: 13px;">KiDS-450 cosmic shear</text>
+          <text x="12" y="63.0" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 10.5px;">Hildebrandt et al. 2017</text>
+          <text x="332.0" y="63.0" text-anchor="end" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.745</text>
+          <g><title>KiDS-450 &#8212; S8 = 0.745 &plusmn; 0.039. A 2.3 sigma tension with Planck 2015 in S8, with substantial discordance in the full parameter space; the result that made the S8 tension widely discussed.</title>
+          <line x1="24.0" y1="77.0" x2="180.0" y2="77.0" style="stroke: var(--color-text);" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+          <circle cx="102.0" cy="77.0" r="4.5" style="fill: var(--color-text);" stroke="none"/>
+          </g>
+          <text x="12" y="96.0" style="fill: var(--color-text); font-family: var(--font-heading); font-size: 13px;">DES Y1 cosmic shear</text>
+          <text x="12" y="109.0" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 10.5px;">Troxel et al. 2018</text>
+          <text x="332.0" y="109.0" text-anchor="end" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.782</text>
+          <g><title>DES Y1 cosmic shear &#8212; S8 = 0.782 &plusmn; 0.027 (marginal posterior maximum). The Y1 3x2pt analysis (Abbott et al. 2018) gave 0.773 (+0.026 / -0.020) and was judged statistically compatible with Planck.</title>
+          <line x1="122.0" y1="123.0" x2="230.0" y2="123.0" style="stroke: var(--color-text);" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+          <circle cx="176.0" cy="123.0" r="4.5" style="fill: var(--color-text);" stroke="none"/>
+          </g>
+          <text x="12" y="142.0" style="fill: var(--color-text); font-family: var(--font-heading); font-size: 13px;">KiDS-1000 cosmic shear</text>
+          <text x="12" y="155.0" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 10.5px;">Asgari et al. 2021</text>
+          <text x="332.0" y="155.0" text-anchor="end" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.759</text>
+          <g><title>KiDS-1000 cosmic shear &#8212; S8 = 0.759 (+0.024 / -0.021), in 3 sigma tension with the Planck Legacy prediction. The peak of the disagreement.</title>
+          <line x1="88.0" y1="169.0" x2="178.0" y2="169.0" style="stroke: var(--color-text);" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+          <circle cx="130.0" cy="169.0" r="4.5" style="fill: var(--color-text);" stroke="none"/>
+          </g>
+          <text x="12" y="188.0" style="fill: var(--color-text); font-family: var(--font-heading); font-size: 13px;">KiDS-1000 3&times;2pt</text>
+          <text x="12" y="201.0" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 10.5px;">Heymans et al. 2021</text>
+          <text x="332.0" y="201.0" text-anchor="end" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.766</text>
+          <g><title>KiDS-1000 3x2pt with BOSS and 2dFLenS clustering &#8212; S8 = 0.766 (+0.020 / -0.014). Matches Planck's precision but is lower by 8.3 &plusmn; 2.6 percent.</title>
+          <line x1="116.0" y1="215.0" x2="184.0" y2="215.0" style="stroke: var(--color-text);" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+          <circle cx="144.0" cy="215.0" r="4.5" style="fill: var(--color-text);" stroke="none"/>
+          </g>
+          <text x="12" y="234.0" style="fill: var(--color-text); font-family: var(--font-heading); font-size: 13px;">DES Y3 cosmic shear</text>
+          <text x="12" y="247.0" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 10.5px;">Amon et al.; Secco et al. 2022</text>
+          <text x="332.0" y="247.0" text-anchor="end" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.759</text>
+          <g><title>DES Y3 cosmic shear, fiducial analysis &#8212; S8 = 0.759 (+0.025 / -0.023), 2.3 sigma from Planck 2018 and described by the team as statistically consistent. A LambdaCDM-optimised version using more small-scale information gave 0.772 (+0.018 / -0.017).</title>
+          <line x1="84.0" y1="261.0" x2="180.0" y2="261.0" style="stroke: var(--color-text);" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+          <circle cx="130.0" cy="261.0" r="4.5" style="fill: var(--color-text);" stroke="none"/>
+          </g>
+          <text x="12" y="280.0" style="fill: var(--color-text); font-family: var(--font-heading); font-size: 13px;">DES Y3 3&times;2pt</text>
+          <text x="12" y="293.0" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 10.5px;">Abbott et al. 2022</text>
+          <text x="332.0" y="293.0" text-anchor="end" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.776</text>
+          <g><title>DES Y3 3x2pt &#8212; S8 = 0.776 &plusmn; 0.017 with Omega_m = 0.339, from cosmic shear, galaxy clustering and galaxy-galaxy lensing combined.</title>
+          <line x1="130.0" y1="307.0" x2="198.0" y2="307.0" style="stroke: var(--color-text);" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+          <circle cx="164.0" cy="307.0" r="4.5" style="fill: var(--color-text);" stroke="none"/>
+          </g>
+          <text x="12" y="326.0" style="fill: var(--color-text); font-family: var(--font-heading); font-size: 13px;">HSC Y3 power spectra</text>
+          <text x="12" y="339.0" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 10.5px;">Dalal et al. 2023</text>
+          <text x="332.0" y="339.0" text-anchor="end" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.776</text>
+          <g><title>HSC Y3 cosmic shear power spectra &#8212; S8 = 0.776 (+0.032 / -0.033), roughly 2 sigma from Planck 2018. HSC covers less area than DES or KiDS but goes substantially deeper.</title>
+          <line x1="98.0" y1="353.0" x2="228.0" y2="353.0" style="stroke: var(--color-text);" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+          <circle cx="164.0" cy="353.0" r="4.5" style="fill: var(--color-text);" stroke="none"/>
+          </g>
+          <text x="12" y="372.0" style="fill: var(--color-text); font-family: var(--font-heading); font-size: 13px;">HSC Y3 2-pt correlations</text>
+          <text x="12" y="385.0" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 10.5px;">Li et al. 2023</text>
+          <text x="332.0" y="385.0" text-anchor="end" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.769</text>
+          <g><title>HSC Y3 cosmic shear two-point correlation functions &#8212; S8 = 0.769 (+0.031 / -0.034), the real-space companion to the power-spectrum analysis on the same data.</title>
+          <line x1="82.0" y1="399.0" x2="212.0" y2="399.0" style="stroke: var(--color-text);" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+          <circle cx="150.0" cy="399.0" r="4.5" style="fill: var(--color-text);" stroke="none"/>
+          </g>
+          <text x="12" y="418.0" style="fill: var(--color-text); font-family: var(--font-heading); font-size: 13px;">DES Y3 + KiDS-1000</text>
+          <text x="12" y="431.0" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 10.5px;">DES &amp; KiDS Collaborations 2023</text>
+          <text x="332.0" y="431.0" text-anchor="end" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.790</text>
+          <g><title>DES Y3 + KiDS-1000 joint cosmic shear &#8212; S8 = 0.790 (+0.018 / -0.014) (posterior mean; the maximum a posteriori value is 0.801). Agrees with Planck at 1.7 sigma once the two teams' modelling choices were harmonised.</title>
+          <line x1="164.0" y1="445.0" x2="228.0" y2="445.0" style="stroke: var(--color-text);" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+          <circle cx="192.0" cy="445.0" r="4.5" style="fill: var(--color-text);" stroke="none"/>
+          </g>
+          <text x="12" y="464.0" style="fill: var(--color-text); font-family: var(--font-heading); font-size: 13px;">KiDS-Legacy cosmic shear</text>
+          <text x="12" y="477.0" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 10.5px;">Wright et al. 2025</text>
+          <text x="332.0" y="477.0" text-anchor="end" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.815</text>
+          <g><title>KiDS-Legacy &#8212; S8 = 0.815 (+0.016 / -0.021), in agreement with Planck at 0.73 sigma. 1,347 square degrees; about two-thirds of the shift towards Planck came from improved redshift-distribution estimation and calibration.</title>
+          <line x1="200.0" y1="491.0" x2="274.0" y2="491.0" style="stroke: var(--color-text);" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+          <circle cx="242.0" cy="491.0" r="4.5" style="fill: var(--color-text);" stroke="none"/>
+          </g>
+          <text x="12" y="510.0" style="fill: var(--color-text); font-family: var(--font-heading); font-size: 13px;">DES Y6 cosmic shear</text>
+          <text x="12" y="523.0" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 10.5px;">DES Collaboration 2026</text>
+          <text x="332.0" y="523.0" text-anchor="end" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.783</text>
+          <g><title>DES Y6 cosmic shear alone &#8212; S8 = 0.783 (+0.019 / -0.015).</title>
+          <line x1="148.0" y1="537.0" x2="216.0" y2="537.0" style="stroke: var(--color-text);" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+          <circle cx="178.0" cy="537.0" r="4.5" style="fill: var(--color-text);" stroke="none"/>
+          </g>
+          <text x="12" y="556.0" style="fill: var(--color-text); font-family: var(--font-heading); font-size: 13px;">DES Y6 3&times;2pt</text>
+          <text x="12" y="569.0" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 10.5px;">DES Collaboration 2026</text>
+          <text x="332.0" y="569.0" text-anchor="end" style="fill: color-mix(in srgb, var(--color-text) 62%, transparent); font-family: var(--font-body); font-size: 11px; font-feature-settings: 'tnum' 1;">0.789</text>
+          <g><title>DES Y6 3x2pt &#8212; S8 = 0.789 &plusmn; 0.012 with Omega_m = 0.333 (+0.023 / -0.028). About 5,000 square degrees and 140 million source shapes; 1.8 sigma from combined Planck, ACT and SPT data in the full parameter space, 2.6 sigma when projected onto S8 alone.</title>
+          <line x1="166.0" y1="583.0" x2="214.0" y2="583.0" style="stroke: var(--color-text);" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+          <circle cx="190.0" cy="583.0" r="4.5" style="fill: var(--color-text);" stroke="none"/>
+          </g>
         </svg>
       </div>
       <p style="font-size: 13.5px; line-height: 23px; color: color-mix(in srgb, var(--color-text) 70%, transparent); margin: 14px 0 0;"><span style="color: var(--color-accent-700); letter-spacing: 0.06em; text-transform: uppercase; font-size: 12px;">Fig. 12</span> &nbsp;Cosmic shear and 3&times;2pt constraints on S<sub>8</sub> in the order they appeared, each with its published 68% interval and the paper it comes from; hover any point for the details. The dashed line and band are Planck 2018, S<sub>8</sub> = 0.832 &plusmn; 0.013. The surveys summarise their posteriors differently &mdash; HSC quotes the maximum of the marginal, KiDS the joint mode with projected intervals, DES the marginal mean &mdash; and that choice alone can move a value by about 0.01; the quoted tensions also depend on which CMB baseline is used. Read top to bottom, the plot is the argument of this chapter: values of 0.74 to 0.78 through the early 2020s, then a move towards 0.79 to 0.82 once redshift calibration and modelling choices were revisited.</p>
